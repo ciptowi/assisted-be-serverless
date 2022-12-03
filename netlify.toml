@@ -1,7 +1,7 @@
 [functions]
   node_bundler = "esbuild"
   included_files = ["src/*.js", "./src/config/database.js", ".sequelizerc"]
-  external_node_modules = ["sequelize", "express", "pg"]
+  external_node_modules = ["netlify-express", "express", "sequelize", "express", "pg"]
 
 [build]
   functions="functions"
