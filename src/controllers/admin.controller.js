@@ -67,7 +67,7 @@ exports.login = (req, res) => {
       }
     }
   })
-};
+}
 
 exports.update = (req, res) => {
   const { username, new_password, old_password } = req.body
@@ -96,7 +96,8 @@ exports.update = (req, res) => {
           }
         })
       }
-    }})
+    }
+  })
 }
 
 exports.delete = (req, res) => {
@@ -126,5 +127,6 @@ exports.delete = (req, res) => {
           }
         })
       }
-    }})
-};
+    }
+  })
+}

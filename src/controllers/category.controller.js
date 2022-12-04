@@ -82,7 +82,8 @@ exports.update = (req, res) => {
       response.error500(res, error.message)
     } else {
       response.build(res, 201, true, `Category was updated successfully`, null, null)
-    }})
+    }
+  })
 }
 
 exports.delete = (req, res) => {
@@ -95,6 +96,5 @@ exports.delete = (req, res) => {
       response.error500(res, error.message)
     } 
     response.build(res, 201, true, `Category was deleted successfully`, null, null)
-  }
-  )
+  })
 }

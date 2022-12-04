@@ -24,8 +24,8 @@ exports.insert = (req, res) => {
       response.error500(res, error.message)
     } else {
       response.created(res)
-    }}
-    )
+    }
+  })
 }
 
 exports.get = (req, res) => {
@@ -53,7 +53,7 @@ exports.get = (req, res) => {
       response.success(res, results.rows)
     })
   }
-};
+}
 
 exports.getById = (req, res) => {
   const id = req.params.id
@@ -63,7 +63,7 @@ exports.getById = (req, res) => {
     }
     response.success(res, results.rows)
   })
-};
+}
 
 exports.update = (req, res) => {
   const id = req.params.id
@@ -75,8 +75,9 @@ exports.update = (req, res) => {
       response.error500(res, error.message)
     } else {
       response.build(res, 201, true, `Answer was updated successfully`, null, null)
-    }})
-};
+    }
+  })
+}
 
 exports.delete = (req, res) => {
   const id = req.params.id
@@ -89,4 +90,4 @@ exports.delete = (req, res) => {
     }
     response.build(res, 201, true, `Answer was deleted successfully`, null, null)
   })
-};
+}
