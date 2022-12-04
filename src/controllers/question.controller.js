@@ -1,11 +1,18 @@
-const { question } = require('../db/models');
-const response = require('../utils/response');
-const jwt = require('jsonwebtoken');
-const secret = require('../config/secret');
+const db = require('../db')
+const response = require('../utils/response')
+const auth = require('../middlewares/auth.middleware')
+const jwt = require('jsonwebtoken')
+const secret = require('../utils/secret')
 
 /*
 #status (0 = inactive, 1 = active)
 */
+const findAll = 'SELECT * FROM question ORDER BY id ASC'
+const findById = 'SELECT * FROM question WHERE id = $1'
+const findByStatus = 'SELECT * FROM question WHERE status = $1'
+const insert = 'INSERT INTO question (content, status, admin_id, category_id, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6)'
+const upadate = 'UPDATE question SET content = $1, category_id = $2, updated_at = $3 WHERE id = $4'
+const upadateStatus = 'UPDATE question SET status = $1, updated_at = $2 WHERE id = $3'
 
 exports.insert = (req, res) => {
   const token = req.headers.authorization
@@ -15,62 +22,71 @@ exports.insert = (req, res) => {
     }
     return decoded.id
   })
-  const payload = { 
-    content: req.body.content, 
-    status: 1 ,
-    admin_id: userId || req.body.admin_id,
-    category_id: req.body.category_id
-  }
-  question.create(payload).then(() => {
-    response.created(res)
-    }).catch((error) => {
+  const date = new Date()
+  const { content, category_id } = req.body
+  const status = 1
+  const admin_id = userId
+ 
+  db.query(insert, [content, status, admin_id, category_id, date, date], (error, results) => {
+    if (error) {
       response.error500(res, error.message)
-    })
+    } else {
+      response.created(res)
+    }}
+    )
 };
+
 exports.get = (req, res) => {
   const status = req.query.status
 if (status === undefined || status === '') {
-  question.findAll().then((data) => {
-      response.success(res, data)
-      }).catch((error) => {
-        response.error500(res, error.message)
-      })
-} else {
-  question.findAll({ where: { status: status } }).then((data) => {
-    response.success(res, data)
-    }).catch((error) => {
+  db.query(findAll, (error, results) => {
+    if (error) {
       response.error500(res, error.message)
-    })
-  }
+    }
+    response.success(res, results.rows)
+  })
+} else {
+  db.query(findByStatus, [status], (error, results) => {
+    if (error) {
+      response.error500(res, error.message)
+    }
+    response.success(res, results.rows)
+  })
+}
 };
 
 exports.getById = (req, res) => {
-  const questionId = req.params.id
-    question.findOne({ where: { id: questionId } }).then((data) => {
-      response.success(res, data)
-      }).catch((error) => {
-        response.error500(res, error.message)
-      })
-};
-
-exports.update = (req, res) => {
-  const questionId = req.params.id
-  const payload = {
-    content: req.body.content, 
-    category_id: req.body.category_id
-  }
-  question.update(payload, { where: { id: questionId } }).then(() => {
-    response.build(res, 201, true, `Successfully`, null, null)
-  }).catch((err) => {
-    response.error500(res, err.message)
+  const id = req.params.id
+  db.query(findById, [id], (error, results) => {
+    if (error) {
+      response.error500(res, error.message)
+    }
+    response.success(res, results.rows)
   })
 };
 
+exports.update = (req, res) => {
+  const id = req.params.id
+  const { content, category_id } = req.body
+  const date = new Date()
+
+  db.query(upadate, [content, category_id, date, id], (error, results) => {
+    if (error) {
+      response.error500(res, error.message)
+    } else {
+      response.build(res, 201, true, `Question was updated successfully`, null, null)
+    }})
+};
+
 exports.delete = (req, res) => {
-  const questionId = req.params.id
-  question.update({ status: 0 }, { where: { id: questionId } }).then(() => {
-    response.build(res, 201, true, `Status Deleted`, null, null)
-  }).catch((err) => {
-    response.error500(res, err.message)
+  const id = req.params.id
+  const date = new Date()
+  const status = 0
+
+  db.query(upadateStatus, [status, date, id], (error, results) => {
+    if (error) {
+      response.error500(res, error.message)
+    }
+    response.build(res, 201, true, `Question was deleted successfully`, null, null)
   })
 };

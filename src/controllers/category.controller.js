@@ -1,8 +1,5 @@
 const db = require('../db')
 const response = require('../utils/response')
-const auth = require('../middlewares/auth.middleware')
-const jwt = require('jsonwebtoken')
-const secret = require('../utils/secret')
 
 /*
 #status (0 = inactive, 1 = active)
