@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const secret = require('../config/secret');
+const secret = require('../utils/secret');
 const bcrypt = require('bcryptjs');
 
 

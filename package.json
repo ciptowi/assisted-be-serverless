@@ -19,12 +19,10 @@
     "netlify-lambda": "^2.0.15",
     "pg": "^8.8.0",
     "pg-hstore": "^2.3.4",
-    "sequelize": "^6.25.5",
-    "serverless-http": "^3.0.1",
-    "serverless-sequelize-migrations": "^1.1.1"
+    "postgresql-easy": "^1.2.5",
+    "serverless-http": "^3.0.1"
   },
   "devDependencies": {
-    "netlify-cli": "^10.10.2",
-    "sequelize-cli": "^6.5.2"
+    "netlify-cli": "^10.10.2"
   }
 }

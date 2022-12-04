@@ -1,0 +1,50 @@
+admin.init({
+  username: DataTypes.STRING,
+  password: DataTypes.STRING,
+  status: DataTypes.INTEGER
+}
+
+answer.init({
+  admin_id: DataTypes.INTEGER,
+  question_id: DataTypes.INTEGER,
+  content: DataTypes.STRING,
+  score: DataTypes.INTEGER,
+  status: DataTypes.INTEGER
+}
+
+category.init({
+  name: DataTypes.STRING,
+  status: DataTypes.INTEGER
+}
+
+participant.init({
+  test_session_id: DataTypes.INTEGER,
+  category_id: DataTypes.INTEGER,
+  nik: DataTypes.STRING,
+  name: DataTypes.STRING,
+  participant_numb: DataTypes.STRING,
+  score: DataTypes.INTEGER,
+  status: DataTypes.INTEGER
+}
+
+question.init({
+  admin_id: DataTypes.INTEGER,
+  category_id: DataTypes.INTEGER,
+  content: DataTypes.STRING,
+  status: DataTypes.INTEGER
+}
+
+test_result.init({
+  participant_id: DataTypes.INTEGER,
+  question_id: DataTypes.INTEGER,
+  answer_id: DataTypes.INTEGER,
+  status: DataTypes.INTEGER
+}
+
+test_session.init({
+  admin_id: DataTypes.INTEGER,
+  description: DataTypes.STRING,
+  category_id: DataTypes.STRING,
+  time_limit: DataTypes.INTEGER,
+  status: DataTypes.INTEGER
+}
