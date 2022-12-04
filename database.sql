@@ -6,3 +6,11 @@ CREATE TABLE admin (
 	created_at TIMESTAMP,
   updated_at TIMESTAMP 
 );
+
+CREATE TABLE category (
+	id serial PRIMARY KEY,
+	name VARCHAR ( 200 ) UNIQUE NOT NULL,
+	status INT NOT NULL,
+	created_at TIMESTAMP,
+  updated_at TIMESTAMP 
+);
