@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
-const secret = require('../config/secret');
+const secret = require('../utils/secret');
 const response = require('../utils/response');
-const auth = require('./auth.middleware');
+// const auth = require('./auth.middleware');
 
 exports.protected = (req, res, next) => {
   let token = req.headers.authorization
