@@ -1,6 +1,5 @@
 const db = require('../db')
 const response = require('../utils/response')
-const auth = require('../middlewares/auth.middleware')
 const jwt = require('jsonwebtoken')
 const secret = require('../utils/secret')
 
@@ -8,6 +7,7 @@ const secret = require('../utils/secret')
 #status (0 = inactive, 1 = active)
 */
 const findAll = 'SELECT * FROM question ORDER BY id ASC'
+const findAllJoin = 'SELECT * FROM question q INNER JOIN answer a ON q.id = a.question_id'
 const findById = 'SELECT * FROM question WHERE id = $1'
 const findByStatus = 'SELECT * FROM question WHERE status = $1'
 const insert = 'INSERT INTO question (content, status, admin_id, category_id, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6)'
@@ -38,21 +38,21 @@ exports.insert = (req, res) => {
 
 exports.get = (req, res) => {
   const status = req.query.status
-if (status === undefined || status === '') {
-  db.query(findAll, (error, results) => {
-    if (error) {
-      response.error500(res, error.message)
-    }
-    response.success(res, results.rows)
-  })
-} else {
-  db.query(findByStatus, [status], (error, results) => {
-    if (error) {
-      response.error500(res, error.message)
-    }
-    response.success(res, results.rows)
-  })
-}
+  if (status === undefined || status === '') {
+    db.query(findAll, (error, results) => {
+      if (error) {
+        response.error500(res, error.message)
+      }
+      response.success(res, results.rows)
+    })
+  } else {
+    db.query(findByStatus, [status], (error, results) => {
+      if (error) {
+        response.error500(res, error.message)
+      }
+      response.success(res, results.rows)
+    })
+  }
 };
 
 exports.getById = (req, res) => {
