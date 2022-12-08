@@ -18,7 +18,7 @@ CREATE TABLE category (
 CREATE TABLE question (
   id serial PRIMARY KEY,
   category_id INT NOT NULL,
-  content VARCHAR (255),
+  content VARCHAR (max),
   status INT NOT NULL,
   created_at TIMESTAMP,
   updated_at TIMESTAMP,
@@ -32,7 +32,7 @@ FROM 'C:\Users\cipto\Desktop\question.csv' DELIMITER ',' CSV HEADER;
 CREATE TABLE answer (
   id serial PRIMARY KEY,
   question_id INT NOT NULL,
-  content VARCHAR (255),
+  content VARCHAR (max),
   score INT NOT NULL,
   status INT NOT NULL,
   created_at TIMESTAMP,
@@ -43,8 +43,8 @@ CREATE TABLE answer (
 CREATE TABLE test_session (
   id serial PRIMARY KEY,
   category_id INT NOT NULL,
-  description VARCHAR (255),
-  pre_test_msg VARCHAR (255),
+  description VARCHAR (max),
+  pre_test_msg VARCHAR (max),
   time_limit INT NOT NULL,
   status INT NOT NULL,
   created_at TIMESTAMP,
