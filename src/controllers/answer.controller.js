@@ -38,7 +38,7 @@ exports.get = (req, res) => {
       }
       response.success(res, results.rows)
     })
-  } else if (status !== undefined || status !== '' && uestion_id == undefined || question_id == '') {
+  } else if (status !== undefined || status !== '' && question_id == undefined || question_id == '') {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
