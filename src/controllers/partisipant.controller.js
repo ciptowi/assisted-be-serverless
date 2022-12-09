@@ -4,13 +4,13 @@ const response = require('../utils/response')
 /*
 #status (0 = inactive, 1 = active)
 */
-const findAll = 'SELECT * FROM test_session ORDER BY id ASC'
-const findById = 'SELECT * FROM test_session WHERE id = $1'
-const findByCategoryId = 'SELECT * FROM test_session WHERE category_id = $1'
-const findByStatus = 'SELECT * FROM test_session WHERE status = $1'
-const insert = 'INSERT INTO test_session (category_id, test_session_id, nik, name, partisipant_numb, score, status, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)'
-const upadate = 'UPDATE test_session SET category_id = $1, nik = $2, name = $3, partisipant_numb = $4, score = $5, updated_at = $6 WHERE id = $7'
-const upadateStatus = 'UPDATE test_session SET status = $1, updated_at = $2 WHERE id = $3'
+const findAll = 'SELECT * FROM partisipant ORDER BY id ASC'
+const findById = 'SELECT * FROM partisipant WHERE id = $1'
+const findByCategoryId = 'SELECT * FROM partisipant WHERE category_id = $1'
+const findByStatus = 'SELECT * FROM partisipant WHERE status = $1'
+const insert = 'INSERT INTO partisipant (category_id, test_session_id, nik, name, partisipant_numb, score, status, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)'
+const upadate = 'UPDATE partisipant SET category_id = $1, nik = $2, name = $3, partisipant_numb = $4, score = $5, updated_at = $6 WHERE id = $7'
+const upadateStatus = 'UPDATE partisipant SET status = $1, updated_at = $2 WHERE id = $3'
 
 exports.insert = (req, res) => {
   const { category_id, test_session_id, nik, name, partisipant_numb, score } = req.body
