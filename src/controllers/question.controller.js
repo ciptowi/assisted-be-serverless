@@ -24,20 +24,15 @@ exports.insert = (req, res) => {
     if (error) {
       response.error500(res, error.message)
     } else {
-      response.created(res)
+      db.query(selectLast, (error, results) => {
+        if (error) {
+          response.error500(res, error.message)
+        }
+        response.success(res, results.rows)
+      })
     }
   })
 }
-
-exports.getLast = (req, res) => {
-    db.query(selectLast, (error, results) => {
-      if (error) {
-        response.error500(res, error.message)
-      }
-      response.success(res, results.rows)
-    })
-};
-
 exports.get = (req, res) => {
   const status = req.query.status
   if (status === undefined || status === '') {
