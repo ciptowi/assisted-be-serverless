@@ -15,7 +15,7 @@ const upadateStatus = 'UPDATE category SET status = $1, updated_at = $2 WHERE id
 exports.getAll = (req, res) => {
   const { status } = req.query
 
-  if (status !== undefined) {
+  if (status !== undefined || status !== '') {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
