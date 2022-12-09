@@ -6,23 +6,16 @@ const response = require('../utils/response')
 */
 const findAll = 'SELECT * FROM category ORDER BY id ASC'
 const findById = 'SELECT * FROM category WHERE id = $1'
-const findByName = 'SELECT * FROM category WHERE name = $1'
+const findByName = 'SELECT * FROM category WHERE name = $1 AND status $2'
 const findByStatus = 'SELECT * FROM category WHERE status = $1'
 const insert = 'INSERT INTO category (name, status, created_at, updated_at) VALUES ($1, $2, $3, $4)'
 const upadate = 'UPDATE category SET name = $1, status = $2, updated_at = $3 WHERE id = $4'
 const upadateStatus = 'UPDATE category SET status = $1, updated_at = $2 WHERE id = $3'
 
 exports.getAll = (req, res) => {
-  const { status, name } = req.query
+  const { status } = req.query
 
-  if (name !== undefined) {
-    db.query(findByName, [name], (error, results) => {
-      if (error) {
-        response.error500(res, error.message)
-      }
-      response.success(res, results.rows)
-    })
-  } else if (status !== undefined) {
+  if (status !== undefined) {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
