@@ -47,20 +47,11 @@ exports.insert = (req, res) => {
   const { name, status } = req.body
   const date = new Date()
 
-  db.query(findByName, [name], (error, results) => {
+  db.query(insert, [name, status, date, date], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     } else {
-      if (results.rowCount === 0) {
-        db.query(insert, [name, status, date, date], (error, results) => {
-          if (error) {
-            response.error500(res, error.message)
-          } else {
-            response.created(res)
-          }})
-      } else {
-        response.authFailed(res, 'Category alredy existing')
-      }
+      response.created(res)
     }
   })
 }
