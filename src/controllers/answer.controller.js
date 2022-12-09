@@ -29,16 +29,16 @@ exports.insert = (req, res) => {
 }
 
 exports.get = (req, res) => {
-  const {question_id,status} = req.query
+  const {status,question_id} = req.query
 
-  if (question_id !== undefined || question_id !== '') {
+  if (question_id !== undefined || question_id !== '' && status !== undefined || status !== '') {
     db.query(findByQuestionId, [question_id, status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
       response.success(res, results.rows)
     })
-  } else if (status !== undefined || status !== '') {
+  } else if (status !== undefined || status !== '' && uestion_id == undefined || question_id == '') {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
