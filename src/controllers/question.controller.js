@@ -28,17 +28,16 @@ exports.insert = (req, res) => {
   })
 }
 
-exports.get = (req, res) => {
-  const status = req.query.status
-  if (status == undefined || status == '') {
-    db.query(findAll, (error, results) => {
+exports.get = (status, res) => {
+  if (status != 0) {
+    db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
       response.success(res, results.rows)
     })
   } else {
-    db.query(findByStatus, [status], (error, results) => {
+    db.query(findAll, (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
