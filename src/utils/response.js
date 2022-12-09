@@ -15,11 +15,10 @@ exports.success = (res, data) => {
   });
 };
 
-exports.created = (res, data) => {
+exports.created = (res) => {
   return res.status(201).json({
     success: true,
-    message: 'Created Successfully',
-    data: data
+    message: 'Created Successfully'
   });
 };
 
