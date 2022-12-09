@@ -29,6 +29,8 @@ exports.insert = (req, res) => {
 }
 
 exports.get = (status, res) => {
+  const { status } = req.query
+  
   if (status != 0) {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
