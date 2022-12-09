@@ -81,13 +81,13 @@ exports.update = (req, res) => {
 
 exports.delete = (req, res) => {
   const id = req.params.id
+  const { status } = req.body
   const date = new Date()
-  const status = 0
   
   db.query(upadateStatus, [status, date, id], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     } 
-    response.build(res, 201, true, `Session was deleted successfully`, null, null)
+    response.build(res, 201, true, `Session status updated`, null, null)
   })
 }
