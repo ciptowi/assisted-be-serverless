@@ -14,7 +14,7 @@ const upadateStatus = 'UPDATE test_session SET status = $1, updated_at = $2 WHER
 
 exports.insert = (req, res) => {
   const { category_id, description, pre_test_msg, time_limit, } = req.body
-  const status = 1
+  const status = 0
   const date = new Date()
 
   db.query(insert, [category_id, description, pre_test_msg, time_limit, status, date, date], (error, results) => {
