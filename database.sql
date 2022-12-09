@@ -18,7 +18,7 @@ CREATE TABLE category (
 CREATE TABLE question (
   id serial PRIMARY KEY,
   category_id INT NOT NULL,
-  content VARCHAR (max),
+  content VARCHAR (MAX),
   status INT NOT NULL,
   created_at TIMESTAMP,
   updated_at TIMESTAMP,
@@ -28,7 +28,7 @@ CREATE TABLE question (
 CREATE TABLE answer (
   id serial PRIMARY KEY,
   question_id INT NOT NULL,
-  content VARCHAR (max),
+  content VARCHAR (MAX),
   score INT NOT NULL,
   status INT NOT NULL,
   created_at TIMESTAMP,
@@ -39,8 +39,8 @@ CREATE TABLE answer (
 CREATE TABLE test_session (
   id serial PRIMARY KEY,
   category_id VARCHAR (255),
-  description VARCHAR (max),
-  pre_test_msg VARCHAR (max),
+  description VARCHAR (MAX),
+  pre_test_msg VARCHAR (MAX),
   time_limit INT NOT NULL,
   status INT NOT NULL,
   created_at TIMESTAMP,
