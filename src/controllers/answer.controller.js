@@ -9,7 +9,7 @@ const secret = require('../utils/secret')
 const findAll = 'SELECT * FROM answer ORDER BY id ASC'
 const findById = 'SELECT * FROM answer WHERE id = $1'
 const findByStatus = 'SELECT * FROM answer WHERE status = $1'
-const findByQuestionId = 'SELECT * FROM answer WHERE question_id = $1'
+const findByQuestionId = 'SELECT * FROM answer WHERE question_id = $1 AND status = $2'
 const insert = 'INSERT INTO answer (content, status, score, question_id, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6)'
 const upadate = 'UPDATE answer SET content = $1, score = $2, question_id = $3, updated_at = $4 WHERE id = $5'
 const upadateStatus = 'UPDATE answer SET status = $1, updated_at = $2 WHERE id = $3'
@@ -29,17 +29,17 @@ exports.insert = (req, res) => {
 }
 
 exports.get = (req, res) => {
-  const { status, question_id } = req.query
+  const {question_id,status} = req.query
 
-  if (status !== undefined || status !== '') {
-    db.query(findByStatus, [status], (error, results) => {
+  if (question_id !== undefined || question_id !== '') {
+    db.query(findByQuestionId, [question_id, status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
       response.success(res, results.rows)
     })
-  } else if (question_id !== undefined || question_id !== '') {
-    db.query(findByQuestionId, [question_id], (error, results) => {
+  } else if (status !== undefined || status !== '') {
+    db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
