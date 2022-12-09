@@ -30,7 +30,7 @@ exports.insert = (req, res) => {
 
 exports.get = (req, res) => {
   const status = req.query.status
-  if (status === undefined || status === '') {
+  if (status == undefined || status == '') {
     db.query(findAll, (error, results) => {
       if (error) {
         response.error500(res, error.message)
