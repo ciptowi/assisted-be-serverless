@@ -75,3 +75,21 @@ CREATE TABLE test_result (
 
 COPY question(id, admin_id, category_id, content, status, created_at, updated_at)
 FROM 'C:\Users\cipto\Desktop\question.csv' DELIMITER ',' CSV HEADER;
+
+-- New structure for insert from csv
+CREATE TABLE question (
+  id INT NOT NULL,
+  category_id INT NOT NULL,
+  content VARCHAR (8000),
+  status INT NOT NULL,
+  FOREIGN KEY (category_id) REFERENCES category (id)
+);
+
+CREATE TABLE answer (
+  id INT NOT NULL,
+  question_id INT NOT NULL,
+  content VARCHAR (8000),
+  score INT NOT NULL,
+  status INT NOT NULL,
+  FOREIGN KEY (question_id) REFERENCES question (id)
+);
