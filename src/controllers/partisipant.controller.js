@@ -6,7 +6,7 @@ const response = require('../utils/response')
 */
 const findAll = 'SELECT * FROM partisipant ORDER BY id ASC'
 const findById = 'SELECT * FROM partisipant WHERE id = $1'
-const findByCategoryId = 'SELECT * FROM partisipant WHERE category_id = $1'
+const findByNik = 'SELECT * FROM partisipant WHERE nik = $1'
 const findByStatus = 'SELECT * FROM partisipant WHERE status = $1'
 const insert = 'INSERT INTO partisipant (category_id, test_session_id, nik, name, partisipant_numb, score, status, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)'
 const upadate = 'UPDATE partisipant SET category_id = $1, nik = $2, name = $3, partisipant_numb = $4, score = $5, updated_at = $6 WHERE id = $7'
@@ -27,17 +27,10 @@ exports.insert = (req, res) => {
 }
 
 exports.get = (req, res) => {
-  const { category_id, status } = req.query
+  const { nik } = req.query
 
-  if (category_id !== undefined) {
-    db.query(findByCategoryId, [category_id], (error, results) => {
-      if (error) {
-        response.error500(res, error.message)
-      }
-      response.success(res, results.rows)
-    })
-  } else if (status !== undefined) {
-    db.query(findByStatus, [status], (error, results) => {
+  if (nik != undefined && nik != '') {
+    db.query(findByNik, [nik], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
