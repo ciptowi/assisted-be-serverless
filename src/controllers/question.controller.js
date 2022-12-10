@@ -9,7 +9,7 @@ const secret = require('../utils/secret')
 const findAll = 'SELECT * FROM question ORDER BY id ASC'
 const findAllJoin = 'SELECT question.content, answer.question_id, answer.id, answer.content FROM question, answer WHERE question.id = answer.question_id'
 const findById = 'SELECT * FROM question WHERE id = $1'
-const findByStatus = 'SELECT * FROM question WHERE status = $1'
+const findByStatus = 'SELECT * FROM question WHERE status = $1 ORDER BY id ASC'
 const insert = 'INSERT INTO question (content, status, category_id, created_at, updated_at) VALUES ($1, $2, $3, $4, $5)'
 const upadate = 'UPDATE question SET content = $1, category_id = $2, updated_at = $3 WHERE id = $4'
 const upadateStatus = 'UPDATE question SET status = $1, updated_at = $2 WHERE id = $3'
@@ -29,16 +29,17 @@ exports.insert = (req, res) => {
 }
 
 exports.get = (req, res) => {
-  const status = req.query.status
-  if (status === undefined || status === '') {
-    db.query(findAll, (error, results) => {
+  const { status } = req.query
+
+  if (status != 0) {
+    db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
       response.success(res, results.rows)
     })
   } else {
-    db.query(findByStatus, [status], (error, results) => {
+    db.query(findAll, (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
