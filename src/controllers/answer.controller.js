@@ -10,16 +10,15 @@ const findAll = 'SELECT * FROM answer ORDER BY id ASC'
 const findById = 'SELECT * FROM answer WHERE id = $1 ORDER BY id ASC'
 const findByStatus = 'SELECT * FROM answer WHERE status = $1 ORDER BY id ASC'
 const findByQuestionId = 'SELECT * FROM answer WHERE question_id = $1 AND status = $2 ORDER BY id ASC'
-const insert = 'INSERT INTO answer (content, status, score, question_id, created_at, updated_at) VALUES ($1, $2, $3, $4, $5, $6)'
-const upadate = 'UPDATE answer SET content = $1, score = $2, question_id = $3, updated_at = $4 WHERE id = $5'
-const upadateStatus = 'UPDATE answer SET status = $1, updated_at = $2 WHERE id = $3'
+const insert = 'INSERT INTO answer (id, content, status, score, question_id) VALUES ($1, $2, $3, $4, $5)'
+const upadate = 'UPDATE answer SET content = $1, score = $2, question_id = $3, status = $4 WHERE id = $5'
+const upadateStatus = 'UPDATE answer SET status = $1 WHERE id = $2'
 
 exports.insert = (req, res) => {
-  const date = new Date()
-  const { content, question_id, score } = req.body
+  const { id, content, question_id, score } = req.body
   const status = 1
 
-  db.query(insert, [content, status, score, question_id, date, date], (error, results) => {
+  db.query(insert, [id, content, status, score, question_id], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     } else {
@@ -67,10 +66,9 @@ exports.getById = (req, res) => {
 
 exports.update = (req, res) => {
   const id = req.params.id
-  const { content, score, question_id } = req.body
-  const date = new Date()
+  const { content, score, question_id, status } = req.body
 
-  db.query(upadate, [content, score, question_id, date, id], (error, results) => {
+  db.query(upadate, [content, score, question_id, status, id], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     } else {
@@ -81,10 +79,9 @@ exports.update = (req, res) => {
 
 exports.delete = (req, res) => {
   const id = req.params.id
-  const date = new Date()
   const status = 0
 
-  db.query(upadateStatus, [status, date, id], (error, results) => {
+  db.query(upadateStatus, [status, id], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     }
