@@ -11,7 +11,7 @@ const findById = 'SELECT * FROM answer WHERE id = $1 ORDER BY id ASC'
 const findByStatus = 'SELECT * FROM answer WHERE status = $1 ORDER BY id ASC'
 const findByQuestionId = 'SELECT * FROM answer WHERE question_id = $1 AND status = $2 ORDER BY id ASC'
 const insert = 'INSERT INTO answer (id, content, status, score, question_id) VALUES ($1, $2, $3, $4, $5)'
-const upadate = 'UPDATE answer SET content = $1, score = $2, question_id = $3, status = $4 WHERE id = $5'
+const upadate = 'UPDATE answer SET content = $1, score = $2, question_id = $3 WHERE id = $4'
 const upadateStatus = 'UPDATE answer SET status = $1 WHERE id = $2'
 
 exports.insert = (req, res) => {
@@ -66,9 +66,9 @@ exports.getById = (req, res) => {
 
 exports.update = (req, res) => {
   const id = req.params.id
-  const { content, score, question_id, status } = req.body
+  const { content, score, question_id } = req.body
 
-  db.query(upadate, [content, score, question_id, status, id], (error, results) => {
+  db.query(upadate, [content, score, question_id, id], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     } else {

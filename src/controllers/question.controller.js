@@ -11,7 +11,7 @@ const findAllJoin = 'SELECT question.content, answer.question_id, answer.id, ans
 const findById = 'SELECT * FROM question WHERE id = $1'
 const findByStatus = 'SELECT * FROM question WHERE status = $1 ORDER BY id ASC'
 const insert = 'INSERT INTO question (id, content, status, category_id) VALUES ($1, $2, $3, $4)'
-const upadate = 'UPDATE question SET content = $1, category_id = $2, status = $3 WHERE id = $4'
+const upadate = 'UPDATE question SET content = $1, category_id = $2 WHERE id = $3'
 const upadateStatus = 'UPDATE question SET status = $1 WHERE id = $2'
 
 exports.insert = (req, res) => {
@@ -59,9 +59,9 @@ exports.getById = (req, res) => {
 
 exports.update = (req, res) => {
   const id = req.params.id
-  const { content, category_id, status } = req.body
+  const { content, category_id } = req.body
 
-  db.query(upadate, [content, category_id, status, id], (error, results) => {
+  db.query(upadate, [content, category_id, id], (error, results) => {
     if (error) {
       response.error500(res, error.message)
     } else {
