@@ -9,6 +9,6 @@ module.exports = function (router) {
   router.post('/participant/insert', controller.insert);
   router.get('/participant', controller.get);
   router.get('/participant/:id', controller.getById);
-  router.put('/participant/:id', middleware.protected, controller.update);
+  router.put('/participant/:id', controller.update);
   router.delete('/participant/:id', middleware.protected, controller.delete);
 };
