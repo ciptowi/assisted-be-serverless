@@ -3,7 +3,7 @@ const fs = require("fs");
 const Pool = require("pg").Pool;
 const fastcsv = require("fast-csv");
 
-let stream = fs.createReadStream("question.csv");
+let stream = fs.createReadStream("answer.csv");
 let csvData = [];
 let csvStream = fastcsv
   .parse()
@@ -24,14 +24,15 @@ let csvStream = fastcsv
     });
 
     // switch query for to use
-    const insertQuestion = "INSERT INTO question2 (id, category_id, content, status) VALUES ($1, $2, $3, $4)";
+    const insertQuestion = "INSERT INTO question (id, category_id, content, status) VALUES ($1, $2, $3, $4)";
+    const insertAnswer = "INSERT INTO answer (id, question_id, content, score, status) VALUES ($1, $2, $3, $4, $5)";
 
     pool.connect((err, client, done) => {
       if (err) throw err;
 
       try {
         csvData.forEach(row => {
-          client.query(insertQuestion, row, (err, res) => {
+          client.query(insertAnswer, row, (err, res) => {
             if (err) {
               console.log(err.stack);
             } else {

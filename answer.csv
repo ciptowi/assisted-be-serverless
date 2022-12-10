@@ -1,0 +1,376 @@
+id,question_id,content,score,status
+1,1,Jika Si A Sedang berpikir maka sia bukan peserta ujian ,0,1
+2,1,Jika Si A sekarang tidak berpikir maka ia peserta ujian ,0,1
+3,1,Jika Si A Sedang berpikir maka ia peserta ujian ,10,1
+4,1,Jika sekarang sedang berpikir maka si A bukan peserta ujian ,0,1
+5,1,Jika Si A bukan peserta ujian maka ia tidak sedang berpikir ,0,1
+6,2,Semua burung adalah elang ,0,1
+7,2,Tidak setiap elang yang terbang ke selatan adalah burung ,0,1
+8,2,Burung bukan elang ,0,1
+9,2,Tidak semua burung Elang terbang ke selatan ,0,1
+10,2,Tidak semua burung terbang ke selatan,10,1
+11,3,Semua yang hadir bukan dokter ,0,1
+12,3,Semua dokter hadir dalam rapat ,0,1
+13,3,Semua yang hadir dalam rapat adalah dokter ,0,1
+14,3,sementara peserta rapat bukan anggota asosiasi profesi,0,1
+15,3,Sementara peserta rapat adalah dokter  ,10,1
+16,4,Pak Imam pasti seorang petani ,10,1
+17,4,Pak Imam bukan seorang petani ,0,1
+18,4,Pak Imam terpaksa menjadi petani ,0,1
+19,4,Pak Imam belum mau menjadi petani ,0,1
+20,4,Pak Imam petani dari desa sebelah di Dayu,0,1
+21,5,sebagian pengendara tidak mengenakan helm ,0,1
+22,5,sebagian pengendara mengenakan helm dan sarung tangan,10,1
+23,5,semua pengendara tidak mengenakan sarung tangan ,0,1
+24,5,sebagian pengendara tidak menggunakan helm dan sarung tangan ,0,1
+25,5,sebagian pengendara tidak mengenakan helm dan tidak mengenakan sarung tangan ,0,1
+26,6,semua pesikolog hadir dalam rapat ,0,1
+27,6,semua anggota perkumpulan adalah psikolog ,0,1
+28,6,semua anggota perkumpulan yang hadir psikolog ,0,1
+29,6,sebagian psikolog adalah anggota perkumpulan ,10,1
+30,6,sebagian yang hadir bukan anggota perkumpulan� ,0,1
+31,7,beberapa sarjana tidak menulis skripsi ,0,1
+32,7,beberapa hipotesis skripsi tidak terbukti benar ,10,1
+33,7,semua hipotesis skripsi terbukti benar ,0,1
+34,7,semua hipotesis penelitian terbukti benar ,0,1
+35,7,semua sarjana hipotesis skripsinya benar,0,1
+36,8,"Nadia, Dian, Nisa, Yuan, Yuni",10,1
+37,8,"Yuan, Nadia, Nisa, Dian, Yuni",0,1
+38,8,"Yuni, Nisa, Yuan, Nadia, Dian",0,1
+39,8,"Yuni, Yuan, Nisa, Dian, Nadia",0,1
+40,8,"Nadia, Dian, Yuan, Nisa, Yuni�",0,1
+41,9,Anisa diterima sebagai perangkat desa ,0,1
+42,9,Anisa mampu mengerjakan tes perangkat desa ,0,1
+43,9,Anisa belum tentu diterima sebagai perangkat desa ,10,1
+44,9,Anisa tidak diterima sebagai perangkat desa ,0,1
+45,9,Anisa tidak lulus dalam tes masuk Perangkat desa ,0,1
+46,10,penghargaan band doa sambutan ramah tamah,0,1
+47,10,sambutan penghargaan band ramah tamah doa,0,1
+48,10,sambutan doa penghargaan Band tambah-tambah,0,1
+49,10,penghargaan sambutan band doa ramah tamah,0,1
+50,10,tidak ada pilihan jawaban yang benar,10,1
+51,11,surat E,10,1
+52,11,surat A,0,1
+53,11,surat D,0,1
+54,11,surat B,0,1
+55,11,surat C,0,1
+56,12,Terpercaya,10,1
+57,12,Bertahan,0,1
+58,12,Pemain lama,0,1
+59,12,Kuat,0,1
+60,12,Senior,0,1
+61,13,Pencurian,0,1
+62,13,Takut kecurian,10,1
+63,13,Kecurian,0,1
+64,13,Penyakit mencuri,0,1
+65,13,Pencuri,0,1
+66,14,Membingungkan,0,1
+67,14,Tidak masuk akal,0,1
+68,14,Terhubung,0,1
+69,14,Bermakna ganda,0,1
+70,14,Masuk akal,10,1
+71,15,Sederhana,10,1
+72,15,Produk lama,0,1
+73,15,Hebat,0,1
+74,15,Kuno,0,1
+75,15,Mapan,0,1
+76,16,Penulis : kuas : cat,0,1
+77,16,Montir : obeng : tang,10,1
+78,16,Guru : kapur : topi,0,1
+79,16,Dokter : obat : stetoskop,0,1
+80,16,Penari : topi : selendang,0,1
+81,17,Terbang : berjalan,0,1
+82,17,Tertawa : teriakan,0,1
+83,17,Mengantuk : tidur,10,1
+84,17,Makanan : kalori,0,1
+85,17,Pelanggaran : hukuman,0,1
+86,18,"saya mencatat untuk pertimbangan, sasaran, dan deadline ",10,1
+87,18,saya jarang mencatat tetapi terekam selau dalam pikiran ,0,1
+88,18,saya saya tidak membutuhkan daftar harian dan melakukan sesuai dengan yang terdekat dan terpenting ,0,1
+89,18,saya selalu mencatat untuk pertimbangan mengambil keputusan ,0,1
+90,18,saya kadang mencatatnya kadang tidak,0,1
+91,19,saya membaginya sesuai dengan kepribadian dan sifat ,0,1
+92,19,saya membaginya sesuai dengan minat dan keinginan ,0,1
+93,19,saya membaginya sesuai dengan keahlian dan keterampilan ,10,1
+94,19,saya membaginya sesuai dengan minat dan kemampuan ,0,1
+95,19,saya membaginya sesuai dengan Bakat,0,1
+96,20,saya mendelegasikan semua tugas kepada semua staf dan saya sebagai pengontrol dan pengawas ,10,1
+97,20,saya mendelegasikan sebagian tugas kepada tetap dan sebagian kepada saya ,0,1
+98,20,saya mendelegasikan tugas biasa kepada tetap dan tugas penting untuk saya ,0,1
+99,20,saya mendelegasikan sebagian kecil tugas kepada staf ,0,1
+100,20,saya mendelegasikan sebagian besar tugas kepada staf ,0,1
+101,21,"Selalu, gagasan saya Cemerlang dan selalu terima ",10,1
+102,21,"kadang-kadang, jika ide baik itu muncul ",0,1
+103,21,"sering, kebanyakan gagasan saya unik sehingga dapat diterima ",0,1
+104,21,saya jarang mengemukakan ide ,0,1
+105,21,ada kadang ide diterima,0,1
+106,22,tidak terlalu penting karena yang terpenting adalah target tercapai ,0,1
+107,22,penting tapi bukan yang utama ,0,1
+108,22,biasa saja karena kita di dunia profesional tidak begitu perlu kedekatan ,0,1
+109,22,cukup penting karena merupakan dorongan untuk mencapai tujuan ,0,1
+110,22,penting tapi yang utama adalah target,10,1
+111,23,merasa sulit karena tidak ingin memberatkan orang lain atas tugas saya ,0,1
+112,23,jika dalam kondisi benar-benar mendesak maka saya akan minta tolong pada orang lain ,10,1
+113,23,Tergantung situasi dan urgensi Terkadang saya minta tolong terkadang tidak ,0,1
+114,23,jika tidak dibutuhkan jarang minta tolong karena tugas tersebut sudah menjadi tanggung jawab ,0,1
+115,23,saya selalu meminta tolong meskipun tugas tersebut sudah menjadi tanggung jawab saya,0,1
+116,24,tergantung hal tersebut dapat ditoleransi atau tidak ,0,1
+117,24,jelas karena Keadilan adalah utama dan mutlak ,10,1
+118,24,tidak masalah jika kedua pihak puas walaupun bukan dalam posisi adil ,0,1
+119,24,tidak masalah Walaupun tidak adil proporsinya cukup dan dapat berjalan dengan baik ,0,1
+120,24,jelas karena Keadilan adalah yang utama,0,1
+121,25,saya selalu aktif berpendapat dan mengarahkan teman-teman untuk aktif juga ,10,1
+122,25,jika perlu berbicara maka saya ungkapkan jika tidak maka saya cukup mendengar ,0,1
+123,25,saya menjadi pengamat sejenak kemudian aktif berpendapat ,0,1
+124,25,saya lebih banyak diam dan berbicara sekedarnya ,0,1
+125,25,saya aktif berpendapat dan mengarahkan teman-teman untuk mengikuti pendapat saya,0,1
+126,26,menolak tugas tersebut karena dirasa mustahil untuk dilaksanakan ,0,1
+127,26,menerima tugas tersebut dengan berbagai syarat yang harus dipenuhi ,0,1
+128,26,menolak tugas dengan mengemukakan kekurangan-kekurangan diri dan meminta atasan untuk menugaskan kepada orang lain ,0,1
+129,26,menerima tugas tersebut kemudian mengajak rekan-rekan kerja untuk mendiskusikan secara bersama berbagai alternatif cara menyelesaikan tugas tersebut ,10,1
+130,26,menerima tugas tersebut kemudian menyelesaikan sendiri,0,1
+131,27,meskipun berbelit-belit selalu mengikuti prosedur yang telah ditetapkan ,0,1
+132,27,sesuai dengan perintah dan arahan atasan ,0,1
+133,27,menerapkan prosedur baru agar tidak ketinggalan zaman ,0,1
+134,27,menerapkan prosedur baru yang lebih maju ,0,1
+135,27,melakukan inovasi secara berkelanjutan agar kerja semakin efektif dan efisien,10,1
+136,28,coordinating ,0,1
+137,28,planning ,0,1
+138,28,organizing ,10,1
+139,28,actuating ,0,1
+140,28,controlling,0,1
+141,29,ilmu perencanaan pengaturan dan pelaksanaan hubungan antar manusia dengan organisasi ,0,1
+142,29,ilmu dan seni tentang penggunaan sumber daya yang terbatas untuk pemenuhan kebutuhan manusia yang tak terbatas ,0,1
+143,29,ilmu mendapatkan hasil kerja yang maksimal dalam rangka memenuhi kebutuhan organisasi untuk mencapai tujuan misi dan visi organisasi ,0,1
+144,29,ilmu dan seni dalam memimpin orang atau SDM ,0,1
+145,29,ilmu dan seni tentang upaya untuk memanfaatkan sumber daya yang dimiliki untuk mencapai tujuan secara efektif dan efisien,10,1
+146,30,adil ,0,1
+147,30,otoriter ,10,1
+148,30,bebas ,0,1
+149,30,demokratis ,0,1
+150,30,personal,0,1
+151,31,Haji Abdul Malik Karim Amrullah,0,1
+152,31,Ki Hajar Dewantara,0,1
+153,31,Ki Bagus Hadikusumo,10,1
+154,31,Tengku Daud Beureuh,0,1
+155,31,Umar Said Cokroaminoto,0,1
+156,32,Peraturan Pemerintah No. 66 tahun 1951 tanggal 17 Agustus 1951,0,1
+157,32,Peraturan Pemerintah No. 66 tahun 1951 tanggal 17 September 1951�,0,1
+158,32,Peraturan Pemerintah No. 66 tahun 1951 tanggal 17 Desember 1951�,0,1
+159,32,Peraturan Pemerintah No. 66 tahun 1951 tanggal 17 November 1951,0,1
+160,32,Peraturan Pemerintah No. 66 tahun 1951 tanggal 17 Oktober 1951,10,1
+161,33,37205,0,1
+162,33,36452,0,1
+163,33,36756,0,1
+164,33,37478,10,1
+165,33,37570,0,1
+166,34,sekurang-kurangnya 1/3 dari jumlah anggota Majelis Permusyawaratan ,10,1
+167,34,sekurang-kurangnya 1/3 dari jumlah anggota Dewan Perwakilan Rakyat,0,1
+168,34,sekurang-kurangnya 2/3 dari jumlah anggota Dewan Perwakilan Rakyat,0,1
+169,34,sekurang-kurangnya 2/3 dari jumlah anggota Majelis Permusyawaratan Rakyat dan Dewan Perwakilan Rakyat�,0,1
+170,34,sekurang-kurangnya 2/3 dari jumlah anggota Majelis Permusyawaratan Rakyat,0,1
+171,35,"Pemerintahan daerah menjalankan otonomi seluas-luasnya, kecuali urusan pemerintahan yang oleh undang-undang ditentukan sebagai urusan Pemerintah Pusat",0,1
+172,35,"Pemerintahan daerah provinsi, daerah kabupaten, dan kota mengatur dan mengurus sendiri urusan pemerintahan menurut asas otonomi dan tugas pembantuan",10,1
+173,35,"Gubernur, Bupati, dan Walikota masing-masing sebagai kepala pemerintahan daerah provinsi, kabupaten, dan kota dipilih secara demokratis.",0,1
+174,35,"Pemerintahan daerah provinsi, daerah kabupaten, dan kota memiliki Dewan Perwakilan Rakyat Daerah yang anggota-anggotanya dipilih melalui pemilihan umum.",0,1
+175,35,Pemerintahan daerah berhak menetapkan peraturan daerah dan peraturan-peraturan lain untuk melaksanakan otonomi dan tugas pembantuan,0,1
+176,36,"Jangankan berdua, bertigapun aku tidak takut pada mereka",0,1
+177,36,"Karena rasa laparnya, makanan apapun juga akan dimakannya.",0,1
+178,36,Sekalipun ia belum pernah mengunjungi rumah orang tuanya.,0,1
+179,36,"Biarpun sendirian, ia nekat berangkat juga. ",10,1
+180,36,Serupiahpun tidak lagi tersisa di saku celananya.,0,1
+181,37,Ia berjalan cepat agar tidak terlambat masuk sekolah.,10,1
+182,37,Mereka jebak pencuri itu hingga akhirnya tertangkap ,0,1
+183,37,Ia teriak-teriak hingga suaranya serak.,0,1
+184,37,Situ sudah lama menunggu adikmu di tempat ini.,0,1
+185,37,Dua anak lelaki itu berantem di pinggir kali,0,1
+186,38,"Dasar kepala udang, soal yang mudah pun tidak bisa dijawabnya!.",0,1
+187,38,"Benar-benar keras kepala anak itu, nasihat orang tuanya tidak juga didengarnya.",0,1
+188,38,Kepala sekolah sedang bertemu guru baru di depan sekolah ,10,1
+189,38,Kelompok pemusik itu sedang naik daun.,0,1
+190,38,Pak Darto adalah tiang kampung di kampung Jaya karena usianya lebih dari seratus tahun,0,1
+191,39,Awal kata ditulis dengan huruf kapital dan diikuti dengan tanda titik,0,1
+192,39,Awal kata ditulis dengan gabungan huruf kapital dan kecil serta tidak diikuti dengan tanda titik,0,1
+193,39,Awal kata ditulis dengan huruf kapital dan diikuti dengan tanda koma,0,1
+194,39,"Awal kata ditulis dengan huruf kapital, diikuti atau tidak diikuti dengan tanda titik tergantung kata yang akan disingkat",0,1
+195,39,Awal kata ditulis dengan huruf kapital dan tidak diikuti dengan tanda titik,10,1
+196,40,"Moh. Ilham, S. Pd�",0,1
+197,40,"Moh. Ilham, S. Pd.�",10,1
+198,40,"Moh, Ilham, S, Pd.�",0,1
+199,40,Moh. Ilham. S. Pd.�,0,1
+200,40,Moh. Ilham. S. P.d.,0,1
+201,41,5 Agustus,10,1
+202,41,7 Agustus,0,1
+203,41,10 Agustus,0,1
+204,41,15 Agustus,0,1
+205,41,17 Agustus,0,1
+206,42,35 orang ,0,1
+207,42,40 orang,0,1
+208,42,45 orang,0,1
+209,42,50 orang,10,1
+210,42,55 orang,0,1
+211,43,27 Kelurahan dan 219 Desa,0,1
+212,43,28 Kelurahan dan 221 Desa,0,1
+213,43,27 Kelurahan dan 220 Desa,0,1
+214,43,28 Kelurahan dan 219 Desa,0,1
+215,43,28 Kelurahan dan 220 Desa,10,1
+216,44,Pendopo Agung Ronggo Warsito,0,1
+217,44,Pendopo Agung Aryo Blitar,0,1
+218,44,Pendopo Agung Ronggo Hadinegoro,10,1
+219,44,Pendopo Agung Sosrohadinegoro,0,1
+220,44,Pendopo Agung Aryo Prawirodiharo,0,1
+221,45,Jer Basuki Mawa Bea,0,1
+222,45,Huruf Hambangun Praja,10,1
+223,45,Lestari Hambangun Negeri,0,1
+224,45,Mamayu Hayuning Bawana,0,1
+225,45,Praja Hanato Negoro,0,1
+226,46,"kesatuan masyarakat hukum yang berwenang untuk mengatur dan mengurus urusan pemerintahan, kepentingan masyarakat setempat berdasarkan prakarsa masyarakat, dan/atau hak tradisional yang diakui dan dihormati dalam sistem pemerintahan Negara Kesatuan Republik Indonesia",0,1
+227,46,"masyarakat yang memiliki batas wilayah yang berwenang untuk mengatur dan mengurus kepentingan masyarakat setempat berdasarkan prakarsa masyarakat, hak asal usul, dan/atau hak tradisional yang diakui dan dihormati dalam sistem pemerintahan Negara Kesatuan Republik Indonesia",0,1
+228,46,"kesatuan masyarakat hukum yang memiliki batas wilayah yang berwenang untuk mengatur dan mengurus urusan pemerintahan, kepentingan masyarakat setempat berdasarkan prakarsa masyarakat, hak asal usul, dan/atau hak tradisional ",0,1
+229,46,"kesatuan masyarakat hukum yang memiliki batas wilayah yang berwenang untuk mengatur dan mengurus urusan pemerintahan, kepentingan masyarakat setempat berdasarkan prakarsa masyarakat, hak asal usul, dan/atau hak tradisional yang diakui dan dihormati dalam sistem pemerintahan Negara Kesatuan Republik Indonesia",10,1
+230,46,"kesatuan masyarakat yang memiliki batas wilayah yang berwenang untuk mengatur dan mengurus urusan pemerintahan, kepentingan masyarakat setempat berdasarkan prakarsa masyarakat, hak asal usul, dan/atau hak tradisional yang diakui dan dihormati dalam sistem pemerintahan Negara Kesatuan Republik Indonesia",0,1
+231,47,"Upaya mengembangkan masyarakat dengan meningkatkan pengetahuan, sikap, ketrampilan, perilaku, kemampuan, kesadaran serta memanfaatkan sumber daya melalui penetapan kebijakan, program, kegiatan, dan pendampingan yang sesuai",0,1
+232,47,"Upaya mengembangkan kemandirian dan kesejahteraan masyarakat dengan meningkatkan pengetahuan, sikap, ketrampilan, perilaku, kemampuan, kesadaran serta memanfaatkan sumber daya melalui penetapan kebijakan, program, kegiatan, dan pendampingan yang sesuai",10,1
+233,47,"Upaya mengembangkan kemandirian dan kesejahteraan masyarakat dengan meningkatkan pengetahuan, sikap, ketrampilan, perilaku, kemampuan, kesadaran serta memanfaatkan sumber daya manusia",0,1
+234,47,"Upaya mengembangkan kemandirian masyarakat dengan meningkatkan pengetahuan, sikap, ketrampilan, perilaku, kemampuan, kesadaran serta memanfaatkan sumber daya alam melalui penetapan kebijakan, program, kegiatan, dan pendampingan yang sesuai",0,1
+235,47,"Upaya mengembangkan kesejahteraan masyarakat dengan meningkatkan pengetahuan, sikap, ketrampilan, perilaku, kemampuan, kesadaran serta memanfaatkan sumber daya yang ada melalui penetapan kebijakan, program, kegiatan, dan pendampingan yang sesuai",0,1
+236,48,"Indeks Ketahanan Sosial, Indeks Ketahanan Pangan dan Indeks Ketahanan Lingkungan",0,1
+237,48,"Indeks Ketahanan Keamanan, Indeks Ketahanan Ekonomi dan Indeks Ketahanan Pangan",0,1
+238,48,"Indeks Ketahanan Sosial, Indeks Ketahanan Ekonomi dan Indeks Ketahanan Ekologi Desa",10,1
+239,48,"Indeks Ketahanan Ekonomi, Indeks Ketahanan Pangan dan indeks ketahanan Keamanan",0,1
+240,48,"Indeks Ketahanan Manusia, Indeks Ketahanan Pangan dan Indeks Ketahanan Sosial",0,1
+241,49,"Desa yang memiliki potensi sumber daya sosial, ekonomi dan ekologi, serta kemampuan mengelolanya untuk peningkatan kesejahteraan masyarakat Desa, kualitas hidup manusia, dan menanggulangi kemiskinan",10,1
+242,49,"Desa yang memiliki potensi sumber daya ekonomi dan ekologi, serta kemampuan mengelolanya untuk peningkatan kesejahteraan, kualitas hidup manusia, dan menanggulangi kemiskinan",0,1
+243,49,"Desa yang memiliki kemampuan melaksanakan pembangunan Desa untuk peningkatan kualitas hidup dan kehidupan sebesar-besarnya kesejahteraan masyarakat Desa dengan ketahanan sosial, ketahanan ekonomi, dan ketahanan ekologi secara berkelanjutan ",0,1
+244,49,"Desa yang memiliki potensi sumber daya sosial, ekonomi dan pangan, serta kemampuan mengelolanya untuk peningkatan kesejahteraan masyarakat Desa, kualitas hidup manusia, dan menanggulangi kemiskinan secara berkelanjutan",0,1
+245,49,"Desa yang memiliki potensi sumber daya sosial, ekonomi dan kemampuan melaksanakan pembangunan Desa untuk peningkatan kualitas hidup dan kehidupan sebesar-besarnya kesejahteraan masyarakat Desa dengan ketahanan sosial, ketahanan ekonomi, dan ketahanan ekologi secara berkelanjutan",0,1
+246,50,"? 0,80 dan ? 0,71",0,1
+247,50,"? 0,81 dan ? 0,71",0,1
+248,50,"? 0,82 dan ? 0,70",0,1
+249,50,"? 0,81 dan ? 0,70",0,1
+250,50,"? 0,82 dan ? 0,71",10,1
+251,51,"pejabat Pemerintah Desa yang mempunyai wewenang, tugas dan kewajiban untuk menyelenggarakan rumah tangga Desanya ",0,1
+252,51,"Pemerintah Desa yang mempunyai wewenang, tugas dan kewajiban untuk menyelenggarakan rumah tangga Desanya dan melaksanakan tugas dari Pemerintah",0,1
+253,51,"pejabat Pemerintah yang mempunyai wewenang, tugas dan kewajiban untuk menyelenggarakan rumah tangga Desanya dan melaksanakan tugas dari Pemerintah ",0,1
+254,51,"pejabat Pemerintah Desa yang mempunyai wewenang, tugas dan kewajiban untuk menyelenggarakan rumah tangga Desanya dan melaksanakan tugas dari Pemerintah dan Pemerintah Daerah",10,1
+255,51,pejabat Pemerintah Desa yang mempunyai tugas dan kewajiban untuk menyelenggarakan rumah tangga Desanya dan melaksanakan tugas dari Pemerintah dan Pemerintah Daerah,0,1
+256,52,"Sekretaris desa, Kepala Urusan dan Kepala Seksi",0,1
+257,52,"Sekretaris desa, Kepala Urusan dan Kamituwo",0,1
+258,52,"Sekretaris desa, Kepala Urusan,  Kepala Seksi dan Kamituwo",0,1
+259,52,"Sekretaris desa, Carik dan Kamituwo",0,1
+260,52,"Sekretariat desa, pelaksana kewilayahan, dan pelaksana teknis",10,1
+261,53,Desa Swasembada wajib memiliki 3 (tiga) urusan dan 3 (tiga) seksi,10,1
+262,53,Desa Swasembada wajib memiliki 3 (tiga) urusan dan 2 (dua) seksi,0,1
+263,53,Desa Swakarya wajib memiliki 2 (dua) urusan dan 3 (tiga) seksi,0,1
+264,53,Desa Swakarya wajib memiliki 2 (dua) urusan dan 2 (dua) seksi,0,1
+265,53,Desa Swadaya memiliki 3 (tiga) urusan dan 3 (tiga) seksi,0,1
+266,54,"melaksanakan pembangunan sarana prasarana perdesaan, pembangunan bidang pendidikan, kesehatan, dan tugas sosialisasi serta motivasi masyarakat di bidang budaya, ekonomi, politik, lingkungan hidup, pemberdayaan keluarga, pemuda, dan olahraga",0,1
+267,54,"mengkoordinasikan urusan perencanaan seperti menyusun rencana anggaran pendapatan dan belanja desa, menginventarisir data-data dalam rangka pembangunan, melakukan monitoring dan evaluasi program, serta penyusunan laporan",0,1
+268,54,"melaksanakan pembangunan sarana prasarana perdesaan, pembangunan bidang pendidikan, kesehatan, dan tugas sosialisasi serta motivasi masyarakat di bidang budaya, ekonomi, politik, lingkungan hidup, pemberdayaan keluarga, pemuda, olahraga, dan karang taruna",10,1
+269,54,"melaksanakan penyuluhan dan motivasi terhadap pelaksanaan hak dan kewajiban masyarakat, meningkatkan upaya partisipasi masyarakat, pelestarian nilai sosial budaya masyarakat, keagamaan, dan ketenagakerjaan",0,1
+270,54,"melaksanakan urusan ketatausahaan seperti tata naskah, administrasi surat menyurat, arsip, dan ekspedisi, dan penataan administrasi perangkat desa, penyediaan prasarana perangkat desa dan kantor, penyiapan rapat, pengadministrasian aset, inventarisasi, perjalanan dinas, dan pelayanan umum",0,1
+271,55,"seksi pemerintahan, seksi kesejahteraan sosial dan seksi pemberdayaan",0,1
+272,55,"seksi pemerintahan, seksi kesejahteraan dan seksi pelayanan",10,1
+273,55,"seksi pemerintahan, seksi keuangan dan seksi umum",0,1
+274,55,"seksi kesejahteraan, sosial dan seksi pelayanan",0,1
+275,55,seksi pemerintahan dan seksi pelayanan,0,1
+276,56,Kewenangan megelola kekayaan desa,0,1
+277,56,Kewenangan mengatur penggunaan anggaran,0,1
+278,56,Kewenangan berdasarkan hak asal-usul,10,1
+279,56,Kewenangan melaksanakan apa ditugaskan pemerintah,0,1
+280,56,Kewenangan membangun jaringan antar desa,0,1
+281,57,Camat,0,1
+282,57,Perwakilan kelompok masyarakat miskin,10,1
+283,57,Pendamping desa,0,1
+284,57,Lembaga Kesejahteraan Masyarakat Desa,0,1
+285,57,Babinsa dan Babinkamtibmas,0,1
+286,58,Susunan Organsisasi Tata Kelola,0,1
+287,58,Petapan dan pengelolaan keuangan desa,0,1
+288,58,Pembentukan Badan Usaha Milik Desa,0,1
+289,58,Pedoman pengankatan dan pemberhentian Perangkat Desa,10,1
+290,58,Pembentukan Badan Permusyawaratan Desa,0,1
+291,59,"badan usaha yang sebagian besar modalnya dimiliki oleh Desa guna mengelola aset, jasa pelayanan, dan usaha lainnya untuk sebesar-besarnya kesejahteraan masyarakat Desa",0,1
+292,59,"badan usaha yang mengelola kekayaan desa secara mandiri, akuntabel dan produktif",0,1
+293,59,badan usaha yang seluruh atau sebagian besar modalnya dimiliki oleh Desa melalui penyertaan secara langsung yang berasal dari kekayaan Desa yang dipisahkan guna mengelola kekayaan dan potensi desa demi tercapainya kesejahteraan masyarakat,0,1
+294,59,"badan usaha yang modalnya dimiliki oleh Desa secara langsung yang berasal dari kekayaan Desa yang dipisahkan guna mengelola aset, jasa pelayanan, dan usaha lainnya untuk sebesar-besarnya kesejahteraan masyarakat Desa",0,1
+295,59,"badan usaha yang seluruh atau sebagian besar modalnya dimiliki oleh Desa melalui penyertaan secara langsung yang berasal dari kekayaan Desa yang dipisahkan guna mengelola aset, jasa pelayanan, dan usaha lainnya untuk sebesar-besarnya kesejahteraan masyarakat Desa",10,1
+296,60,Kondisi keamanan dan kesejahteraan desa,10,1
+297,60,inisiatif Pemerintah Desa dan/atau masyarakat Desa ,0,1
+298,60,potensi usaha ekonomi Desa,0,1
+299,60,sumberdaya manusia yang mampu mengelola BUM Desa,0,1
+300,60,penyertaan modal dari Pemerintah Desa dalam bentuk pembiayaan dan kekayaan Desa yang diserahkan untuk dikelola sebagai bagian dari usaha BUM Desa,0,1
+301,61,"Penasihat, pelaksana operasional dan pengawas",10,1
+302,61,"Ketua, Sekretaris dan Bedahara",0,1
+303,61,BPH dan Kepala unit usaha ,0,1
+304,61,"Ketua Umum, Sekretaris Jendral, Bendaharan dan Pembantu umum",0,1
+305,61,"Ketua, Sekretaris, Bedahara dan Kepala unit usaha",0,1
+306,62,Pengawas,0,1
+307,62,Penasihat,10,1
+308,62,Ketua,0,1
+309,62,Penanggung Jawab,0,1
+310,62,Pengontrol,0,1
+311,63,Ketua,0,1
+312,63,Wakil Ketua merangkap Anggota ,0,1
+313,63,Sekretaris merangkap Anggota,0,1
+314,63,Bendahara merangkap Anggota,10,1
+315,63,Anggota,0,1
+316,64,sebesar 70% (delapan puluh persen) dikembalikan ke masing-masing Kelurahan,0,1
+317,64,sebesar 75% (delapan puluh persen) dikembalikan ke masing-masing Kelurahan,0,1
+318,64,Sebesar 80% (delapan puluh persen) dikembalikan ke masing-masing Kelurahan,10,1
+319,64,sebesar 25% (dua puluh persen) digunakan untuk mendukung program kegiatan Pemerintah Kabupaten Blitar,0,1
+320,64,sebesar 30% (dua puluh persen) digunakan untuk mendukung program kegiatan Pemerintah Kabupaten Blitar,0,1
+321,65,Peraturan Bupati nomor 15 tahun 2019,0,1
+322,65,Peraturan Bupati nomor 12 tahun 2019,0,1
+323,65,Peraturan Bupati nomor 9 tahun 2019,0,1
+324,65,Peraturan Bupati nomor 6 tahun 2019,0,1
+325,65,Peraturan Bupati nomor 3 tahun 2019,10,1
+326,66,"dana yang bersumber dari anggaran pendapatan dan belanja negara yang diperuntukan bagi Desa yang ditransfer melalui anggaran pendapatan dan belanja daerah kabupaten/kota dan digunakan untuk membiayai penyelenggaraan pemerintahan, pelaksanaan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat serta penanggulangan COVID-19",0,1
+327,66,"dana yang bersumber dari APBN dan APBD yang diperuntukan bagi Desa yang ditransfer melalui anggaran pendapatan dan belanja daerah kabupaten/kota dan digunakan untuk membiayai penyelenggaraan pemerintahan, pelaksanaan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat serta penanggulangan COVID-19",0,1
+328,66,"dana yang bersumber dari anggaran pendapatan dan belanja daerah yang diperuntukan bagi Desa yang ditransfer melalui anggaran pendapatan dan belanja desa dan digunakan untuk membiayai penyelenggaraan pemerintahan, pelaksanaan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat serta penanggulangan COVID-19",0,1
+329,66,"dana yang bersumber dari anggaran pendapatan dan belanja negara yang diperuntukan bagi Desa yang ditransfer melalui anggaran pendapatan dan belanja daerah kabupaten/kota dan digunakan untuk membiayai penyelenggaraan pemerintahan, pelaksanaan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat",10,1
+330,66,"dana yang bersumber dari APBN, APBD dan APB Desa yang diperuntukan bagi Desa yang ditransfer melalui anggaran pendapatan dan belanja daerah kabupaten/kota dan digunakan untuk membiayai penyelenggaraan pemerintahan, pelaksanaan pembangunan, pembinaan kemasyarakatan, dan pemberdayaan masyarakat serta penanggulangan COVID-19",0,1
+331,67,kegiatan pemberian bantuan langsung berupa dana tunai yang bersumber dari Dana Desa kepada keluarga penerima manfaat dengan kriteria yang disepakati dan diputuskan melalui musyawarah Desa,10,1
+332,67,kegiatan pemberian bantuan langsung berupa dana tunai yang bersumber dari APBN kepada keluarga penerima manfaat dengan kriteria yang diputuskan oleh kementerian,0,1
+333,67,kegiatan pemberian bantuan langsung berupa dana tunai yang bersumber dari Dana Desa kepada keluarga penerima manfaat yang diputuskan oleh pemerintah daerah,0,1
+334,67,pemberian bantuan langsung berupa dana tunai yang bersumber dari APBD kepada keluarga penerima manfaat yang diputuskan oleh pemerintah daerah,0,1
+335,67,pemberian bantuan langsung tunai yang bersumber dari Dana Desa kepada keluarga penerima manfaat dengan kriteria yang diputuskan oleh Pemerintah Desa,0,1
+336,68,Kemanusiaan,0,1
+337,68,Pemerataan,10,1
+338,68,Kebhinekaan,0,1
+339,68,Keseimbangan alam,0,1
+340,68,Kepentingan nasional,0,1
+341,69,Peraturan Desa,0,1
+342,69,Keputusan Kepala Desa,0,1
+343,69,Musyawarah Desa,10,1
+344,69,Keputusan Kepala Desa dan Ketua BPD,0,1
+345,69,Keputusan Bupati,0,1
+346,70,Mengontrol penggunaan dana desa,0,1
+347,70,Ikut serta dalam pengelolaan dan pengadaan barang ,0,1
+348,70,Mengusulkan nama-nama yang harus masuk dalam daftar penerima bantuan langsung tunai,0,1
+349,70,Memastikan penyusunan dan pengelolaan anggaran dana desa sesuai dengan amanah undang-undang,0,1
+350,70,memastikan prioritas penggunaan Dana Desa ditetapkan dalam dokumen RKP Desa dan APB Desa,10,1
+351,71,"Dayu, Kambingan Barat, Sunan",0,1
+352,71,"Sanan, Kambingan, Dayu",10,1
+353,71,"Kambingan Timur, Sanan, Dayu",0,1
+354,71,"Sunan, Dayu, Kambingan",0,1
+355,71,"Sanan, Dayu, Ngenthak",0,1
+356,72,Muhasim,0,1
+357,72,Hardi,0,1
+358,72,Darmo Soehodo,10,1
+359,72,Nur Rifai,0,1
+360,72,Sudibyo Winoto,0,1
+361,73,38 RT dan 8 RW,0,1
+362,73,38 RT dan 9 RW,0,1
+363,73,39 RT dan 8 RW,0,1
+364,73,39 RT dan 9 RW,10,1
+365,73,40 RT dan 9 RW,0,1
+366,74,"Bosan, LPN, Kasanda",0,1
+367,74,"Kasanda, Arkambar, KPL",0,1
+368,74,"KPL, Bosan, Kasanda",0,1
+369,74,"KPL, Kasanda, Arkambar",0,1
+370,74,"LPN, Bosan, KPL",10,1
+371,75,"Rumah sakit, pasar, industri",0,1
+372,75,"Pasar, Industri, Pertanian",10,1
+373,75,"Pertanian, tambak ikan, pasar",0,1
+374,75,"Tambak ikan, industri, pasar",0,1
+375,75,"Pasar, sekolah, pertanian",0,1
