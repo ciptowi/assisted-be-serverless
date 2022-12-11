@@ -4,7 +4,7 @@ const response = require('../utils/response')
 /*
 #status (0 = inactive, 1 = active)
 */
-const findAll = 'SELECT * FROM partisipant ORDER BY id ASC'
+const findAll = 'SELECT partisipant.*, category.name c_name FROM partisipant, category WHERE category.id = partisipant.category_id ORDER BY id ASC'
 const findById = 'SELECT * FROM partisipant WHERE id = $1'
 const findByNik = 'SELECT * FROM partisipant WHERE nik = $1'
 const findByStatus = 'SELECT * FROM partisipant WHERE status = $1'
