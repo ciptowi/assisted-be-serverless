@@ -30,14 +30,14 @@ exports.insert = (req, res) => {
 exports.get = (req, res) => {
   const {status,question_id} = req.query
 
-  if (question_id !== 0 && status !== 0) {
+  if (question_id != 0 && status != 0) {
     db.query(findByQuestionId, [question_id, status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
       response.success(res, results.rows)
     })
-  } else if (status !== 0 && question_id == 0) {
+  } else if (status != 0 && question_id == 0) {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
