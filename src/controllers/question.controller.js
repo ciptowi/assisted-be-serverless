@@ -10,6 +10,7 @@ const findAll = 'SELECT * FROM question ORDER BY id ASC'
 const findAllJoin = 'SELECT question.content, answer.question_id, answer.id, answer.content FROM question, answer WHERE question.id = answer.question_id'
 const findById = 'SELECT * FROM question WHERE id = $1'
 const findByStatus = 'SELECT * FROM question WHERE status = $1 ORDER BY id ASC'
+const findByCategory = 'SELECT * FROM question WHERE category_id = $1 AND status = $2 ORDER BY id ASC'
 const insert = 'INSERT INTO question (id, content, status, category_id) VALUES ($1, $2, $3, $4)'
 const upadate = 'UPDATE question SET content = $1, category_id = $2 WHERE id = $3'
 const upadateStatus = 'UPDATE question SET status = $1 WHERE id = $2'
@@ -29,8 +30,16 @@ exports.insert = (req, res) => {
 
 exports.get = (req, res) => {
   const { status } = req.query
+  const { category_id } = req.query
 
-  if (status != 0) {
+  if (status != 0 && category_id != 0) {
+    db.query(findByCategory, [category_id, status], (error, results) => {
+      if (error) {
+        response.error500(res, error.message)
+      }
+      response.success(res, results.rows)
+    })
+  }else if (status != 0 && category_id == 0) {
     db.query(findByStatus, [status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
