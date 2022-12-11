@@ -28,30 +28,15 @@ exports.insert = (req, res) => {
 
 
 exports.get = (req, res) => {
-  const { category_id, status } = req.query
+  const { status } = req.query
 
-  if (category_id !== undefined) {
-    db.query(findByCategoryId, [category_id], (error, results) => {
-      if (error) {
-        response.error500(res, error.message)
-      }
-      response.success(res, results.rows)
-    })
-  } else if (status !== undefined) {
-    db.query(findByStatus, [status], (error, results) => {
-      if (error) {
-        response.error500(res, error.message)
-      }
-      response.success(res, results.rows)
-    })
-  } else {
-    db.query(findAll, (error, results) => {
-      if (error) {
-        response.error500(res, error.message)
-      }
-      response.success(res, results.rows)
-    })
-  }
+  db.query(findByStatus, [status], (error, results) => {
+    if (error) {
+      response.error500(res, error.message)
+    }
+    response.success(res, results.rows)
+  })
+ 
 }
 
 exports.getById = (req, res) => {
