@@ -30,13 +30,21 @@ exports.insert = (req, res) => {
 exports.get = (req, res) => {
   const { status } = req.query
 
-  db.query(findByStatus, [status], (error, results) => {
-    if (error) {
-      response.error500(res, error.message)
-    }
-    response.success(res, results.rows)
-  })
- 
+  if (status == 1) {
+    db.query(findByStatus, [status], (error, results) => {
+      if (error) {
+        response.error500(res, error.message)
+      }
+      response.success(res, results.rows)
+    })
+  } else {
+    db.query(findAll, (error, results) => {
+      if (error) {
+        response.error500(res, error.message)
+      }
+      response.success(res, results.rows)
+    })
+  }
 }
 
 exports.getById = (req, res) => {
