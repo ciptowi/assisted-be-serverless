@@ -44,7 +44,7 @@ exports.get = (req, res) => {
       }
       response.success(res, results.rows)
     })
-  } else {
+  } else if (status == 0 && question_id == 0){
     db.query(findAll, (error, results) => {
       if (error) {
         response.error500(res, error.message)
