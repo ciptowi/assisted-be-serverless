@@ -40,7 +40,7 @@ exports.get = (req, res) => {
       response.success(res, results.rows)
     })
   } else if (question_id == 0 && status != 0 && category_id != 0) {
-    db.query(findByCategoryId, [category_id, status], (error, results) => {
+    db.query(findByQuestionId, [category_id, status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
