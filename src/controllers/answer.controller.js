@@ -10,8 +10,7 @@ const findAll = 'SELECT * FROM answer ORDER BY id ASC'
 const findById = 'SELECT * FROM answer WHERE id = $1 ORDER BY id ASC'
 const findByStatus = 'SELECT * FROM answer WHERE status = $1 ORDER BY id ASC'
 const findByQuestionId = 'SELECT * FROM answer WHERE question_id = $1 AND status = $2 ORDER BY id ASC'
-const findByCategoryId = 'SELECT answer.*, question.category_id FROM answer, question WHERE answer.question_id = question.id AND question.category_id = $1 AND status = $2 ORDER BY id ASC'
-//const findByCategoryId = 'SELECT answer.*, question.category_id FROM answer JOIN question ON answer.question_id = question.id WHERE question.category_id = $1 AND status = $2 ORDER BY id ASC'
+const findByCategoryId = 'SELECT answer.*, question.category_id FROM answer JOIN question ON answer.question_id = question.id WHERE question.category_id = $1 AND status = $2 ORDER BY id ASC'
 const insert = 'INSERT INTO answer (id, content, status, score, question_id) VALUES ($1, $2, $3, $4, $5)'
 const upadate = 'UPDATE answer SET content = $1, score = $2, question_id = $3 WHERE id = $4'
 const upadateStatus = 'UPDATE answer SET status = $1 WHERE id = $2'
@@ -40,7 +39,7 @@ exports.get = (req, res) => {
       response.success(res, results.rows)
     })
   } else if (question_id == 0 && status != 0 && category_id != 0) {
-    db.query(findByQuestionId, [category_id, status], (error, results) => {
+    db.query(findByCategoryId, [category_id, status], (error, results) => {
       if (error) {
         response.error500(res, error.message)
       }
